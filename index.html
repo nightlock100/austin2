@@ -136,6 +136,19 @@ div.gm4html5_div_class{margin:0;padding:0;border:0}
   </canvas>
 </div>
 
+    <header>
+            <nav class="navbar" id="navbar">
+                <h1 class="main-heading">Retro Bowl</h1>
+                <ul class="nav-links">
+                    <li><a href="https://nightlock100.github.io/notaustin">Main RB</a></li>
+                    <li><a href="https://nightlock102.github.io/notaustincollege">College Mod</a></li>
+                    <li><a href="readme.html">Read Me!</a></li>
+                    <li><a href="console.html">Console</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
 <div id="jax-dimmer"></div>
 <div id="jax-credit" role="status" aria-live="polite" title="Dismiss" tabindex="-1">
   <b>MADE BY ZENV2</b>
@@ -278,5 +291,20 @@ div.gm4html5_div_class{margin:0;padding:0;border:0}
 
 <script src="html5game/RetroBowl.js"></script>
 <script src="mod-menu.js"></script>
+<script>       // Handle Enter key press to toggle navbar visibility
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                // Toggle the navbar sliding in and out by changing its transform property
+                const header = document.querySelector('header');
+                if (header.style.transform === 'translateY(0px)') {
+                    header.style.transform = 'translateY(-100%)'; // Hide the navbar
+                    document.body.style.paddingTop = '0'; // Adjust body padding to compensate
+                } else {
+                    header.style.transform = 'translateY(0px)'; // Show the navbar
+                    document.body.style.paddingTop = '50px'; // Adjust body padding when navbar is visible
+                }
+            }
+        });
+</script>
 </body>
 </html>
